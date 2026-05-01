@@ -1,5 +1,7 @@
 # Multi-Domain Support Triage Agent
 
+![Multi-Domain Support Triage Agent hero image](hero_image.png)
+
 A production-grade, terminal-based AI agent designed for the **HackerRank Orchestrate (May 2026)** hackathon. This agent autonomously triages, routes, and responds to support tickets across three major product ecosystems—**HackerRank**, **Claude (Anthropic)**, and **Visa**—using a strictly grounded local support corpus.
 
 ## 🚀 Key Features
@@ -16,37 +18,10 @@ A production-grade, terminal-based AI agent designed for the **HackerRank Orches
 
 The agent employs a **Retrieval-Augmented Generation (RAG)** pipeline optimized for support workflows. It prioritizes safety and accuracy over generic conversation.
 
+---
 ### System Architecture
 
-```text
-[ Input: support_tickets.csv ]
-              │
-              ▼
-      [ Company Router ] ───────► (HackerRank / Claude / Visa)
-              │
-              ▼
-       [ Safety Gate ] ─────────► (High Risk / Adversarial) ──┐
-              │                                               │
-          (Passed)                                            │
-              │                                               │
-              ▼                                               │
-   [ Context Retriever ] ◄── (TF-IDF Search Index)            │
-              │                                               │
-              ▼                                               │
-     [ Grounding Gate ] ────────► (Weak Match / No Docs) ─────┤
-              │                                               │
-        (Strong Match)                                        │
-              │                                               │
-              ▼                                               │
-[ Groq Llama 3.1 LLM (JSON) ]                                 │
-              │                                               │
-              ▼                                               │
-  [ Schema & URL Validator ] ───► (Failed Validation) ────────┤
-              │                                               │
-          (Passed)                                            │
-              │                                               │
-              ▼                                               ▼
-[ Output: output.csv (Replied) ]               [ Output: output.csv (Escalated) ]
+![System architecture overview](sysArch.png)
 
 ```
 
