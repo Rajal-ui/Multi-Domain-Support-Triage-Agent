@@ -23,8 +23,6 @@ The agent employs a **Retrieval-Augmented Generation (RAG)** pipeline optimized 
 
 ![System architecture overview](sysArch.png)
 
-```
-
 ### The Processing Pipeline
 
 1.  **Ingestion:** Support tickets are batch-loaded from CSV.
@@ -123,3 +121,9 @@ High-risk scenarios are automatically escalated to human agents:
 ## 📊 Evaluation
 
 A secondary script `eval_sample.py` is included to verify the agent's performance against the provided ground truth sample labels. This was used during development to tune retrieval thresholds and minimize over-escalation while maintaining 100% safety.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

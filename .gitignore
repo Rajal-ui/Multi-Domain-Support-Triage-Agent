@@ -31,3 +31,7 @@ data/index/
 data/embeddings/
 *.sqlite
 *.db
+
+# images
+hero_image.png
+sysArch.png
