@@ -21,7 +21,7 @@ The agent employs a **Retrieval-Augmented Generation (RAG)** pipeline optimized 
 ---
 ### System Architecture
 
-![System architecture overview](sysArch.png)
+![System architecture overview](SystemArchitecture.png)
 
 ### The Processing Pipeline
 
